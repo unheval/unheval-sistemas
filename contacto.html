@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <!--Contenedor del Contenido Inicio-->
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="index.html">
+                    <img src="img/logo2.png" width="450" height="70" alt="Logotipo de Ibuy">
+                </a>
+                <nav class="navegación">
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="tienda.html">Tienda</a>
+                    <a href="contacto.html">Contáctanos</a>
+
+                    <!--<a href="tienda.html"><img src="img/carrito.png" width="38" height="28" alt="Carrito de compras" /></a>-->
+                </nav>
+            </div>
+        </div>
+        <!--Contenedor del contenido Fin-->
+    </header>
+    <!--<h1 class="class fw-700 centrar-texto"></h1>-->
+    <div class="imagen-contacto"></div>
+
+    <main class="contenedor seccion contenido-centrado">
+
+        <h2 class="fw-700 centrar-texto">Realizar Pedido</h2>
+        <form method="post" action="facturas/facturas.php">
+            <fieldset>
+                <legend>Información Personal</legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nom" placeholder="Tu Nombre" required>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Tu Correo Electrónico" required>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="dir" placeholder="Tu Dirección" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="tel" maxlength="9" id="telefono" placeholder="Tu Teléfono" required>
+                <!--<label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje"></textarea>-->
+            </fieldset>
+            <fieldset>
+                <legend>Información sobre Producto</legend>
+                <label for="opciones">Producto</label>
+                <select id="opciones" name="prod">
+                    <option value="" >--Seleccione--</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Celular">Celular</option>
+                    <option value="Audifonos">Audifonos</option>
+                    <option value="Zapatillas">Zapatillas</option>
+                    <option value="Accesorios">Accesorios</option>
+                    <option value="Ropa">Ropa</option>
+                    <option value="Electrodomestico">Electrodomestico</option>
+                </select>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="uni" min=0 max="10">
+                <!--<label for="caracteristicas del producto">Modelo:</label>
+                <input type="text" id="caracteristicas del producto" placeholder="Modelo" required>-->
+            </fieldset>
+            <fieldset>
+                <legend>Comprar</legend>
+                <p>¿Cómo desea pagar?</p>
+                <div class="forma-contacto">
+                    <label for="tarjeta">Master Card</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+                    <label for="tarjeta">Visa</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+                <p>Introduzca número de Tarjeta</p>
+                <!--<p>Si eligió Teléfono, elija la fecha y la hora</p>-->
+                <label for="Numero"></label>
+                <input type="tel" maxlength="16" id="Número de Tarjeta" required>
+                <!--<label for="hora">Hora:</label>
+                <input type="time" id="hora" min="09:00" max="18:00">
+                <input type="url">-->
+            </fieldset>
+            <fieldset>
+                <legend>Comentarios</legend>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Realizar Compra" class="boton boton-amarillo">
+            <input type="hidden" name="generar_factura" value="true">
+        </form>
+    </main>
+    <footer class="site-footer seccion">
+        <!--Contenedor Footer-->
+        <div class="contenedor contenedor-footer">
+            <nav class="navegación-2">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="contacto.html">Contáctanos</a>
+
+            </nav>
+        </div>
+        <p class="copyright">Ibuy|2020 &copy;</p>
+    </footer>
+</body>
+
+</html>
